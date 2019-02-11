@@ -7,7 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/icon-font.css">
+    <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
@@ -79,9 +79,26 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+
+                        <img 
+                            srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" 
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1"
+                        >
+                        <img 
+                            srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" 
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2"
+                        >
+                        <img 
+                            srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" 
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"
+                        >
+
+                        <!-- <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                         <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
                     </div>
                 </div>
             </div>
@@ -349,7 +366,10 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -382,9 +402,17 @@
             <div class="popup__right">
                 <a href="#section-tours" class="popup__close">&times;</a>
                 <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before
+                    booking</h3>
                 <p class="popup__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at consectetur lorem donec massa sapien faucibus. Tincidunt dui ut ornare lectus sit. Vestibulum morbi blandit cursus risus at ultrices mi tempus. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Elementum nibh tellus molestie nunc non blandit massa enim. Dignissim convallis aenean et tortor at risus. Neque viverra justo nec ultrices. Enim blandit volutpat maecenas volutpat. Diam quam nulla porttitor massa id neque aliquam. Cras adipiscing enim eu turpis egestas. Enim nulla aliquet porttitor lacus luctus. Vulputate eu scelerisque felis imperdiet.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Duis at consectetur lorem donec massa sapien faucibus. Tincidunt dui ut
+                    ornare lectus sit. Vestibulum morbi blandit cursus risus at ultrices mi tempus. Parturient montes
+                    nascetur ridiculus mus mauris vitae ultricies. Elementum nibh tellus molestie nunc non blandit
+                    massa enim. Dignissim convallis aenean et tortor at risus. Neque viverra justo nec ultrices. Enim
+                    blandit volutpat maecenas volutpat. Diam quam nulla porttitor massa id neque aliquam. Cras
+                    adipiscing enim eu turpis egestas. Enim nulla aliquet porttitor lacus luctus. Vulputate eu
+                    scelerisque felis imperdiet.
                 </p>
                 <a href="#" class="btn btn--green">Book now</a>
             </div>
